@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="clipboard.min.js"></script>
+</head>
+<body>
+    <textarea id="inputText" name="input-texto" placeholder="Ingresa el texto aqui" class="areaEntrada">
+    </textarea>  
+    <div class="text-box">
+        <!-- <p id="resultado" class="areaSalida"></> -->
+        <textarea id="resultado" class="areaSalida"></textarea>
+    </div>
+    <main class="contenedor">
+        <div class="contenedor-botones">
+            <a href="#" class="encriptar" onclick="encriptar()">Encriptar</a>
+            <a href="#" class="desencriptar" onclick="desencriptar()">Desencriptar</a>
+            <a href="#" class="copiar" onclick="copiaTexto()" data-clipboard-target="#resultado">Copiar</a>
+            <a href="#" class="limpiar" onclick="limpiarTexto()">Limpiar</a>
+        </div>  
+        <div class="contenedor-imagen">
+            <img src="img/titulo-encriptador.svg" class="titulo-encriptador">
+            <img src="img/ilustracion.svg" class="ilustracion">
+        </div>
+    </main>
+    <script src="script.js"></script>    
+</body>
+</html>
