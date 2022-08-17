@@ -9,11 +9,11 @@
     <script src="clipboard.min.js"></script>
 </head>
 <body>
-    <textarea id="inputText" name="input-texto" placeholder="Ingresa el texto aqui" class="areaEntrada">
+    <textarea id="inputText" name="input-texto" placeholder="Aquí ingrese el texto a encriptar" class="areaEntrada" onclick="limpiarArea()">
     </textarea>  
+    <p id="textMsg"><b>Nota:</b> Solo texto en minúsculas y sin tildes</p>
     <div class="text-box">
-        <!-- <p id="resultado" class="areaSalida"></> -->
-        <textarea id="resultado" class="areaSalida"></textarea>
+        <p id="resultado" class="areaSalida"></p>
     </div>
     <main class="contenedor">
         <div class="contenedor-botones">

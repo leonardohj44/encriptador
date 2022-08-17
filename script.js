@@ -7,25 +7,26 @@ const keyEnc = {
 };
 
 function encriptar() {
-    let txt=document.getElementById("inputText").value;
+    let txt = document.getElementById("inputText").value;
     if (!/[^a-z ]/.test(txt)) {     // solo letras minusculas sin tildes
-        let textResult=txt.split("").map(e=>{
-            if(e=='a') return 'ai';
-            else if(e=='e') return 'enter';
-            else if(e=='i') return 'imes';
-            else if(e=='o') return 'ober';
-            else if(e=='u') return 'ufat';
+        let textResult = txt.split("").map(e => {
+            if (e == 'a') return 'ai';
+            else if (e == 'e') return 'enter';
+            else if (e == 'i') return 'imes';
+            else if (e == 'o') return 'ober';
+            else if (e == 'u') return 'ufat';
             else return e;
-            }).join("");
+        }).join("");
         document.getElementById("resultado").innerHTML = textResult;
     } else {
         document.getElementById("inputText").value = "Solo texto en minúsculas y sin tildes";
+        setTimeout(() => { document.getElementById("inputText").value = "" }, 2000);
     }
 }
 
 function desencriptar() {
     let txt = document.getElementById("inputText").value
-    for(const [k, v] of Object.entries(keyEnc)) 
+    for (const [k, v] of Object.entries(keyEnc))
         txt = txt.replaceAll(v, k);
     let textResult = txt;
     document.getElementById("resultado").innerHTML = textResult;
@@ -36,10 +37,14 @@ function copiaTexto() {
 };
 
 function limpiarTexto() {
-    textResult ="";
+    textResult = "";
     document.getElementById("resultado").innerHTML = textResult;
     document.getElementById("inputText").value = textResult;
-    
+}
+
+function limpiarArea() {
+    document.getElementById("inputText").value = " ";
+    document.getElementById("resultado").innerHTML = " ";
 }
 
 limpiarTexto();
